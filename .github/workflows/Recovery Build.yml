@@ -10,19 +10,19 @@ on:
       DEVICE_TREE_URL:
         description: Device Tree URL
         required: true
-        default: https://github.com/SHRP-Devices/device_samsung_d2x
+        default: https://github.com/Anya1014CN/fox_device_xiaomi_chopin/
       DEVICE_TREE_BRANCH:
         description: Device Tree Branch
         required: true
-        default: android-9.0
+        default: android-12
       DEVICE_PATH:
         description: Path the device tree should be synced to, relative to source root
         required: true
-        default: device/samsung/d2x
+        default: device/xiaomi/chopin
       DEVICE_MAKEFILE:
         description: 'Name of device-specific makefile from tree (format: <PREFIX>_<DEVICE_NAME>)'
         required: true
-        default: omni_d2x
+        default: twrp_chopin
       BUILD_TARGET:
         type: choice
         description: Partition containing recovery ramdisk
@@ -31,7 +31,7 @@ on:
         - recovery
         - vendor_boot
         required: true
-        default: recovery
+        default: boot
 
 jobs:
   build:
